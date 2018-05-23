@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+const cssLoader = require("./cssLoader");
+
 import React from "react";
 const ReactDOMServer = require("react-dom/server");
 
@@ -16,11 +18,17 @@ app.use(function requestLogger(request, response, next) {
     return next();
 })
 
+app.get("/style.css", function(request, response, next) {
+    console.log("cssLoader", cssLoader);
+    response.setHeader('Content-Type', 'text/css');
+    return response.send(cssLoader.css);
+})
 
 app.get("/", function(request, response) {
 
     var html = ReactDOMServer.renderToString(<App />);
     console.log("rendered html", html);
+
 
     response.send(Html({body: html, title: "frobots"}));
 });
