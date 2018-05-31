@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const moment = require("moment");
 
 const cssLoader = require("./cssLoader");
 
@@ -7,7 +8,12 @@ import React from "react";
 const ReactDOMServer = require("react-dom/server");
 
 import Html from "./components/Html";
-import App from "./components/App";
+import Home from "./components/Home";
+import Post from "./components/Post";
+
+require("./cssLoader").load(__dirname + "/style.css");
+
+import posts from "./posts";
 
 app.use(function requestLogger(request, response, next) {
 
@@ -19,20 +25,49 @@ app.use(function requestLogger(request, response, next) {
 })
 
 app.get("/style.css", function(request, response, next) {
-    console.log("cssLoader", cssLoader);
     response.setHeader('Content-Type', 'text/css');
     return response.send(cssLoader.css);
 })
 
 app.get("/", function(request, response) {
 
-    var html = ReactDOMServer.renderToString(<App />);
-    console.log("rendered html", html);
-
+    var html = ReactDOMServer.renderToString(<Home />);
 
     response.send(Html({body: html, title: "frobots"}));
 });
 
+function fetchPost(request) {
+
+    var date = request.params.date;
+    var id = request.params.postId;
+
+    date = moment(date);
+    
+    var ret = posts.filter(post => {
+        var diffDays = moment(post.createdAt).diff(date, "days");
+        return diffDays < 1;
+    })
+    ret = ret.filter(post => {
+        var titleAsId = post.title.toLowerCase().replace(/[ ]/g, "-");
+        console.log(id);
+        return titleAsId == id;
+    })
+
+    ret = ret[0];
+
+    return ret;
+}
+
+app.get("/p/:date/:postId", function(request, response, next) {
+
+    var post = fetchPost(request);
+    if (!post || !post.component) {
+        return response.status(404).json({error: "Not Found"});
+    }
+
+    var html = ReactDOMServer.renderToString(<Post post={post} />);
+    response.send(Html({body: html, title: "frobots"}));
+})
 
 app.use(function errorHandler(error, request, response, next) {
     console.error(error);

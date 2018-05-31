@@ -2,8 +2,7 @@ import React from "react";
 
 require("../cssLoader").load(__dirname + "/App.css");
 
-import Toolbar from "./Toolbar";
-import Post from "./Post";
+import Home from "./Home";
 
 
 class App extends React.Component {
@@ -11,8 +10,7 @@ class App extends React.Component {
 
         return (
             <div className="App">
-                <Toolbar />
-                <Post />
+                <Home />
             </div>
         );
     }

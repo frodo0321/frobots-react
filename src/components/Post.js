@@ -1,15 +1,25 @@
 import React from "react";
 
-import Toolbar from "./Toolbar";
+import MainLayout from "./MainLayout";
 
 class Post extends React.Component {
+
+    constructor(props) {
+        super(props);
+    
+    }
+
     render() {
 
+        console.log("PROPS", this.props);
+
         return (
-            <div className="content">
-                <Toolbar />
-                <div className="post">Content</div>
-            </div>
+            <MainLayout>
+                <div className="content">
+                    <div className="title">{this.props.post.title}</div>
+                    <this.props.post.component />
+                </div>
+            </MainLayout>
        );
     }
 }
