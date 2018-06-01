@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "./Header";
 import LeftSidebar from "./LeftSidebar";
+import Footer from "./Footer";
 
 require("../cssLoader").load(__dirname + "/MainLayout.css");
 
@@ -17,7 +18,7 @@ class MainLayout extends React.Component {
                         {this.props.children}
                     </div>
                 </div>
-                <div className="footer" style={{width: "100%", backgroundColor: "black"}}></div>
+                <Footer />
             </div>
        );
     }
