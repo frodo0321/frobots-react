@@ -10,6 +10,7 @@ const ReactDOMServer = require("react-dom/server");
 import Html from "./components/Html";
 import Home from "./components/Home";
 import Post from "./components/Post";
+import Error404 from "./components/errors/404";
 
 require("./cssLoader").load(__dirname + "/style.css");
 
@@ -62,7 +63,10 @@ app.get("/p/:date/:postId", function(request, response, next) {
 
     var post = fetchPost(request);
     if (!post || !post.component) {
-        return response.status(404).json({error: "Not Found"});
+        let error = new Error("Not Found");
+        error.status = 404;
+        return next(error);
+        //return response.status(404).json({error: "Not Found"});
     }
 
     var html = ReactDOMServer.renderToString(<Post post={post} />);
@@ -70,6 +74,12 @@ app.get("/p/:date/:postId", function(request, response, next) {
 })
 
 app.use(function errorHandler(error, request, response, next) {
+
+    if (error.status == 404) {
+        var html = ReactDOMServer.renderToString(<Error404 />);
+        response.send(Html({body: html, title: "frobots"}));
+    }
+
     console.error(error);
     response.status(500);
     response.json({error: true});

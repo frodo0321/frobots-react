@@ -1,8 +1,9 @@
 import React from "react";
 
 import Toolbar from "./Toolbar";
+import LeftSidebar from "./LeftSidebar";
 
-require("../cssLoader").load(__dirname + "/Home.css");
+require("../cssLoader").load(__dirname + "/MainLayout.css");
 
 class MainLayout extends React.Component {
     render() {
@@ -10,7 +11,12 @@ class MainLayout extends React.Component {
         return (
             <div className="MainLayout">
                 <Toolbar />
-                {this.props.children}
+                <div className="main">
+                    <LeftSidebar />
+                    <div className="main-content">
+                        {this.props.children}
+                    </div>
+                </div>
                 <div className="footer" style={{width: "100%", backgroundColor: "black"}}></div>
             </div>
        );

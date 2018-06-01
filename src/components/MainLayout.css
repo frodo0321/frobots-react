@@ -1,3 +1,15 @@
 .MainLayout {
 
 }
+
+.MainLayout .main-content {
+    max-width: 672px;
+    margin: 0px auto;
+}
+
+.MainLayout .main-content-eeeeeeee {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}

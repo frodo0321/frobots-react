@@ -1,37 +1,22 @@
-.site-header {
-    background-color: #000;
-    position: relative;
-    width: 100%;
-    z-index: 4;
-}
-
-.header-main {
-    min-height: 48px;
-    padding: 0 10px;
-}
-
 .Toolbar {
-    width: 100%;
-    height: 50px;
-    padding-left: 30px;
+    position: relative;
+    z-index: 4;
+    min-height: 48px;
     background-color: black;
+    padding-left: 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-items: center;
 }
 
-.site-title {
-    float: left;
+.Toolbar .title {
     font-size: 18px;
     font-weight: 700;
     line-height: 48px;
     margin: 0;
     max-width: -webkit-calc(100% - 86px);
     max-width: calc(100% - 86px);
-}
-
-.site-title {
     color: #fff;
     display: block;
     overflow: hidden;
@@ -39,16 +24,10 @@
     white-space: nowrap;
 }
 
-.site-title a, .site-title a:hover {
+.Toolbar .title a, .Toolbar .title a:hover {
     color: #fff;
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-@media screen and (min-width: 783px)
-.masthead-fixed .site-header {
-    position: fixed;
-    top: 0;
 }

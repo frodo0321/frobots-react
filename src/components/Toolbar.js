@@ -7,8 +7,8 @@ class Toolbar extends React.Component {
     render() {
 
         return (
-            <div className="Toolbar site-header">
-                <h1 className="site-title">
+            <div className="Toolbar">
+                <h1 className="title">
                     <a href="/" rel="home">frobots</a>
                 </h1>
             </div>
