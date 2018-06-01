@@ -18,6 +18,8 @@
 .PostList .post-date svg {
     margin-bottom: -1px;
     margin-right: 2px;
+    fill: white;
+    stroke: #767676;
 }
 
 .PostList .post .post-meta {
@@ -47,4 +49,17 @@
 
 .PostList .post {
     padding: 0px 30px 10px;
+    padding-top: 48px;
+    margin-bottom: 48px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.PostList .post:first-of-type {
+    padding: 0;
+    border: 0;
+}
+
+.PostList .post>* {
+    max-width: 474px;
+    margin: 0px auto;
 }

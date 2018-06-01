@@ -33,7 +33,7 @@ class PostList extends React.Component {
                             <span className="post-date">
                                 <a href={postUrl}>
                                     <svg width="12" height="12">
-                                        <g stroke-width="1" stroke="black" fill="white">
+                                        <g stroke-width="1">
                                             <circle cx="6" cy="6" r="5" ></circle>
                                             <line x1="6" y1="6" x2="6" y2="3"></line>
                                             <line x1="6" y1="6" x2="8" y2="9"></line>

@@ -7,12 +7,12 @@ class LeftSidebar extends React.Component {
 
         return (
             <div className="LeftSidebar">
-                <h3>Left Sidebar</h3>
                 <div className="list">
                     <div className="title">Pages</div>
-                    <div className="items">
-                        <div className="item">test</div>
-                    </div>
+                    <ul>
+                        <li><a href="#">Test1</a></li>
+                        <li><a href="#">TETS2</a></li>
+                    </ul>
                 </div>
             </div>
        );

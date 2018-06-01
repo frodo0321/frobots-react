@@ -17,6 +17,7 @@ class MainLayout extends React.Component {
                     <div className="main-content">
                         {this.props.children}
                     </div>
+                    <div className="right-sidebar-placeholder" style={{}}></div>
                 </div>
                 <Footer />
             </div>
