@@ -1,4 +1,4 @@
-.Toolbar {
+.Header {
     position: relative;
     z-index: 4;
     min-height: 48px;
@@ -10,7 +10,7 @@
     justify-items: center;
 }
 
-.Toolbar .title {
+.Header .title {
     font-size: 18px;
     font-weight: 700;
     line-height: 48px;
@@ -24,7 +24,7 @@
     white-space: nowrap;
 }
 
-.Toolbar .title a, .Toolbar .title a:hover {
+.Header .title a, .Header .title a:hover {
     color: #fff;
     display: block;
     overflow: hidden;

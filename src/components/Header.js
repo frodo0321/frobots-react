@@ -1,19 +1,19 @@
 import React from "react";
 
-require("../cssLoader").load(__dirname + "/Toolbar.css");
+require("../cssLoader").load(__dirname + "/Header.css");
 
 
-class Toolbar extends React.Component {
+class Header extends React.Component {
     render() {
 
         return (
-            <div className="Toolbar">
+            <header className="Header">
                 <h1 className="title">
                     <a href="/" rel="home">frobots</a>
                 </h1>
-            </div>
+            </header>
         );
     }
 }
 
-export default Toolbar;
+export default Header;

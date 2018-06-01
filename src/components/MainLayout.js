@@ -1,6 +1,6 @@
 import React from "react";
 
-import Toolbar from "./Toolbar";
+import Header from "./Header";
 import LeftSidebar from "./LeftSidebar";
 
 require("../cssLoader").load(__dirname + "/MainLayout.css");
@@ -10,7 +10,7 @@ class MainLayout extends React.Component {
 
         return (
             <div className="MainLayout">
-                <Toolbar />
+                <Header />
                 <div className="main">
                     <LeftSidebar />
                     <div className="main-content">
