@@ -96,5 +96,5 @@ class CSSPreprocessors extends React.Component {
     }
 }
 
-export const Component = CSSPreprocessors;
+export const component = CSSPreprocessors;
 export default CSSPreprocessors;

@@ -49,13 +49,17 @@ function fetchPost(request) {
     date = moment(date, "YYYY-MM-DD");
     
     var ret = posts.filter(post => {
+
         var diffDays = moment(post.createdAt).diff(date, "days");
-        return diffDays < 1;
-    })
-    ret = ret.filter(post => {
+
         var titleAsId = post.title.toLowerCase().replace(/[ ]/g, "-");
-        console.log(id);
-        return titleAsId == id;
+
+        let dateMatch = diffDays < 1;
+        let titleMatch = titleAsId == id;
+
+        let match = dateMatch && titleMatch;
+
+        return match;
     })
 
     ret = ret[0];
