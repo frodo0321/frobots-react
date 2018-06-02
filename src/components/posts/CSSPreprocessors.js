@@ -88,7 +88,7 @@ class CSSPreprocessors extends React.Component {
 
                 <a href="https://www.sitepoint.com/whats-difference-sass-scss/">https://softwareengineering.stackexchange.com/questions/181536/are-there-any-advantages-of-sass-over-less</a>
                 <a href="https://www.keycdn.com/blog/sass-vs-less/">https://softwareengineering.stackexchange.com/questions/181536/are-there-any-advantages-of-sass-over-less</a>
-                a href="https://softwareengineering.stackexchange.com/questions/181536/are-there-any-advantages-of-sass-over-less">https://softwareengineering.stackexchange.com/questions/181536/are-there-any-advantages-of-sass-over-less</a>
+                <a href="https://softwareengineering.stackexchange.com/questions/181536/are-there-any-advantages-of-sass-over-less">https://softwareengineering.stackexchange.com/questions/181536/are-there-any-advantages-of-sass-over-less</a>
 
 
             </div>
