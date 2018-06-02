@@ -50,8 +50,8 @@ port=8000                                                  #set the port number
 
 class handler(BaseHTTPServer.BaseHTTPRequestHandler):      #this is the class that does the work of the server
 def do_GET(self):                                      #when you load a webpage, a GET method is sent; this function handles that
-self.send_response(200)                            #<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html">tells the web browser that everything's OK</a>
-self.send_header('Content-type','text/html')       #<a href="http://www.w3.org/Protocols/rfc1341/4_Content-Type.html">tells the web browser what type of data is comming</a>
+self.send_response(200)                            #`}<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html">tells the web browser that everything's OK</a>{`
+self.send_header('Content-type','text/html')       #`}<a href="http://www.w3.org/Protocols/rfc1341/4_Content-Type.html">tells the web browser what type of data is comming</a>{`
 self.end_headers()                                           
 self.wfile.write("hello world")                    #send html to the web browser
 
@@ -74,8 +74,12 @@ except KeyboardInterrupt:
                 </p>
 
                 <p>
-                    <a href="http://i.imgur.com/7JfgMP4.png"><img style={{width: "50%"}} src="http://i.imgur.com/7JfgMP4.png" alt="" /></a> happens.
+                    <a href="http://i.imgur.com/7JfgMP4.png"><img style={{width: "50%"}} src="http://i.imgur.com/7JfgMP4.png" alt="" /></a>
                 </p>
+                <p>
+                     happens.
+                </p>
+
                 <h3>Button Time</h3>
 
                 <p>
