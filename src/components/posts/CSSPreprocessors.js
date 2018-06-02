@@ -1,9 +1,7 @@
 import React from "react";
 
-var postData = {
-    title: "Comparing CSS Preprocessors",
-    createdAt: new Date("2018-06-02T14:39:26-07:00")
-};
+export const title = "Comparing CSS Preprocessors";
+export const createdAt = new Date("2018-06-02T14:39:26-07:00");
 
 
 class CSSPreprocessors extends React.Component {
@@ -62,6 +60,28 @@ class CSSPreprocessors extends React.Component {
                 The only two downsides are long compile time and syntax (not sure if this is even a downside or just personal) which I think are outweighed by the biggest upside in my opinion of having a large community.  That way I know if I ever need support or if there are any bugs or whatever, there will almost always be some solution out there, which I think will save me a ton of time down the road.  
                 As for the long compile time, that should be able to be improved by doing it smartly, like only compiling when a change happens and things like that.  I'm sure theres a ton of tools out there that can do that already.
 
+                <h4>*Update*</h4>
+                When actually starting to use node-sass, it turns out it compiles both .sass and .scss formats which solves the annoying syntax issue.  Another win I guess!
+                Just messing around with the compiler a bit:
+                <pre className="code">{`
+> var css = sass.renderSync({data: "$primary-color: green;$secondary-color: blue; .test {background-color: $primary-color;.a {background-color: $secondary-color;width: 5px;.b {font-weight: 500}}}", outputStyle: "expanded"}).css.toString()
+> console.log(css)
+.test {
+  background-color: green;
+}
+
+.test .a {
+  background-color: blue;
+  width: 5px;
+}
+
+.test .a .b {
+  font-weight: 500;
+}
+
+                `}</pre>
+                Pretty cool!
+
                 <p>
                     A few notible resources:
                 </p>
@@ -76,4 +96,5 @@ class CSSPreprocessors extends React.Component {
     }
 }
 
+export const Component = CSSPreprocessors;
 export default CSSPreprocessors;
