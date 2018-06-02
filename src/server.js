@@ -28,7 +28,10 @@ app.use(function requestLogger(request, response, next) {
 
 app.get("/style.css", function(request, response, next) {
     response.setHeader('Content-Type', 'text/css');
-    return response.send(cssLoader.css);
+
+    let css = cssLoader.compileCss();
+
+    return response.send(css);
 })
 
 app.get("/", function(request, response) {
