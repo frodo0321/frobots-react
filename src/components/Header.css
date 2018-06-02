@@ -1,5 +1,7 @@
 .Header {
-    position: relative;
+    position: fixed;
+    top: 0px;
+    width: 100%;
     z-index: 4;
     min-height: 48px;
     background-color: black;
