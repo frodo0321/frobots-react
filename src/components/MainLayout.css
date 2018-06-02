@@ -4,13 +4,13 @@
 }
 
 .MainLayout .main {
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
 }
 
 
 .MainLayout .main-content {
-    max-width: 672px;
     flex-grow: 1;
 }
 

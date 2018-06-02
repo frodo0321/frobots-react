@@ -2,6 +2,9 @@ import React from "react";
 
 import MainLayout from "./MainLayout";
 
+require("../cssLoader").load(__dirname + "/Post.css");
+
+
 class Post extends React.Component {
 
     constructor(props) {
@@ -15,9 +18,11 @@ class Post extends React.Component {
 
         return (
             <MainLayout>
-                <div className="content">
+                <div className="Post">
                     <div className="title">{this.props.post.title}</div>
-                    <this.props.post.component />
+                    <div className="content">
+                        <this.props.post.component />
+                    </div>
                 </div>
             </MainLayout>
        );

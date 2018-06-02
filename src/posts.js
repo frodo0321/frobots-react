@@ -1,3 +1,4 @@
+import LightControlOverInternet from "./components/posts/LightControlOverInternet";
 import TestPost from "./components/posts/TestPost";
 
 var posts = [{
@@ -6,7 +7,8 @@ var posts = [{
     component: TestPost
 }, {
     title: "Light Control over the Internet",
-    createdAt: new Date("2015-01-13 22:37:42")
+    createdAt: new Date("2015-01-13 22:37:42"),
+    component: LightControlOverInternet
 }, {
     title: "How binary numbers work",
     createdAt: new Date(),
