@@ -42,7 +42,7 @@ function fetchPost(request) {
     var date = request.params.date;
     var id = request.params.postId;
 
-    date = moment(date);
+    date = moment(date, "YYYY/MM/DD");
     
     var ret = posts.filter(post => {
         var diffDays = moment(post.createdAt).diff(date, "days");
@@ -77,7 +77,7 @@ app.use(function errorHandler(error, request, response, next) {
 
     if (error.status == 404) {
         var html = ReactDOMServer.renderToString(<Error404 />);
-        response.send(Html({body: html, title: "frobots"}));
+        return response.send(Html({body: html, title: "frobots"}));
     }
 
     console.error(error);
