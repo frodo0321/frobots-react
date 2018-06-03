@@ -1,6 +1,7 @@
 import React from "react";
 
 import MainLayout from "./MainLayout";
+import PostHeader from "./PostHeader";
 
 require("../cssLoader").load(__dirname + "/Post.scss");
 
@@ -19,7 +20,8 @@ class Post extends React.Component {
         return (
             <MainLayout>
                 <div className="Post">
-                    <div className="title">{this.props.post.title}</div>
+                    <PostHeader post={this.props.post} />
+
                     <div className="content">
                         <this.props.post.component />
                     </div>
