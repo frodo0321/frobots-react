@@ -2,6 +2,8 @@ import React from "react";
 
 export const title = "Comparing CSS Preprocessors";
 export const createdAt = new Date("2018-06-02T14:39:26-07:00");
+export const published = false;
+module.exports.public = true;
 
 
 class CSSPreprocessors extends React.Component {

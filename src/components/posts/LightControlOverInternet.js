@@ -1,6 +1,23 @@
 import React from "react";
 
-class WordPressReactMigration extends React.Component {
+export const title = "Light Control over the Internet";
+export const createdAt = new Date("2015-01-13 22:37:42");
+export const published = true;
+module.exports.public = true;
+
+export const preview = (
+    <div>
+        <p>
+            Ever wonder how people control lights over the internet (such as from The Big Bang Theory)?  Here's a little tutorial on how to do it.
+        </p>
+        <p>
+            For this I'm using python, Ubuntu, and an Arduino Mega.  Tutorials on how to install these can be found from a <a href="http://lmgtfy.com/?q=how+to+install+python">simple google search</a>.
+        </p>
+    </div>
+);
+
+
+class LightControlOverInternet extends React.Component {
 
     constructor(props) {
         super(props);
@@ -10,17 +27,6 @@ class WordPressReactMigration extends React.Component {
     render() {
 
         console.log("PROPS", this.props);
-
-        let preview = (
-            <div>
-                <p>
-                    Ever wonder how people control lights over the internet (such as from The Big Bang Theory)?  Here's a little tutorial on how to do it.
-                </p>
-                <p>
-                    For this I'm using python, Ubuntu, and an Arduino Mega.  Tutorials on how to install these can be found from a <a href="http://lmgtfy.com/?q=how+to+install+python">simple google search</a>.
-                </p>
-            </div>
-        );
 
         return (
             <div className="post-content">
@@ -213,5 +219,5 @@ def callback(qs):
     }
 }
 
-export default WordPressReactMigration;
-
+export const component = LightControlOverInternet;
+export default LightControlOverInternet;

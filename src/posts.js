@@ -1,36 +1,34 @@
-import LightControlOverInternet from "./components/posts/LightControlOverInternet";
+//import LightControlOverInternet from "./components/posts/LightControlOverInternet";
 import TestPost from "./components/posts/TestPost";
+//const CSSPreprocessors = require("./components/posts/CSSPreprocessors");
 
 var posts = [{
     title: "Test Post",
     createdAt: new Date(),
     component: TestPost
-}, {
-    title: "Light Control over the Internet",
-    createdAt: new Date("2015-01-13 22:37:42"),
-    component: LightControlOverInternet
-}, {
-    title: "How binary numbers work",
-    createdAt: new Date(),
-}, {
-    title: "How to add Google AdSense on WordPress",
-    createdAt: new Date(),
-}, {
-    title: "How to backup a WordPress blog",
-    createdAt: new Date(),
-}, {
-    title: "Building a social network app with reactjs and nodejs Part 2: Creating SPA with react.js",
-    createdAt: new Date(),
-}, {
-    title: "How to add jQuery to WordPress",
-    createdAt: new Date(),
-}, {
-    title: "Light Control over the Internet",
-    createdAt: new Date(),
-}, {
-    title: "Computer Vision Security System",
-    createdAt: new Date(),
-}, {
+}, 
+require("./components/posts/LightControlOverInternet"), 
+require("./components/posts/ComputerVisionSecuritySystem"), {
+//}, {
+//    title: "Light Control over the Internet",
+//    createdAt: new Date("2015-01-13 22:37:42"),
+//    component: LightControlOverInternet
+//}, {
+//    title: "How binary numbers work",
+//    createdAt: new Date(),
+//}, {
+//    title: "How to add Google AdSense on WordPress",
+//    createdAt: new Date(),
+//}, {
+//    title: "How to backup a WordPress blog",
+//    createdAt: new Date(),
+//}, {
+//    title: "Building a social network app with reactjs and nodejs Part 2: Creating SPA with react.js",
+//    createdAt: new Date(),
+//}, {
+//    title: "How to add jQuery to WordPress",
+//    createdAt: new Date(),
+//}, {
     title: "How a computer cpu works",
     createdAt: new Date(),
 }, {
@@ -57,8 +55,7 @@ var posts = [{
 }, {
     title: "How to use nodejs inspect from a remote server",
     createdAt: new Date(),
-}];
-
+}, require("./components/posts/CSSPreprocessors")];
 
 
 export default posts;
