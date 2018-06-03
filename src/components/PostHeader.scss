@@ -1,0 +1,39 @@
+.PostHeader {
+    text-transform: uppercase;
+
+    .post-title {
+        font-size: 33px;
+        font-weight: 300;
+        line-height: 1.0909090909;
+        margin-bottom: 12px;
+        margin: 0 0 12px 0;
+    }
+
+    .post-date svg {
+        margin-bottom: -1px;
+        margin-right: 2px;
+        fill: white;
+        stroke: #767676;
+    }
+
+    .post-meta {
+        margin-bottom: 8px;
+        color: #767676;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.3333333333;
+        text-transform: uppercase;
+    }
+
+
+    .post-meta a {
+        color: #767676;
+    }
+    .post-meta a:hover {
+        color: #24890d;
+    }
+
+    .post-title a {
+        color: #2b2b2b;
+    }
+}
