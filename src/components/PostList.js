@@ -1,6 +1,6 @@
 import React from "react";
 
-require("../cssLoader").load(__dirname + "/PostList.css");
+require("../cssLoader").load(__dirname + "/PostList.scss");
 
 import posts from "../posts";
 

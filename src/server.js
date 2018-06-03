@@ -13,7 +13,7 @@ import Home from "./components/Home";
 import Post from "./components/Post";
 import Error404 from "./components/errors/404";
 
-require("./cssLoader").load(__dirname + "/style.css");
+require("./cssLoader").load(__dirname + "/style.scss");
 
 import posts from "./posts";
 

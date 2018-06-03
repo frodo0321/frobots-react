@@ -1,6 +1,6 @@
 import React from "react";
 
-require("../cssLoader").load(__dirname + "/App.css");
+require("../cssLoader").load(__dirname + "/App.scss");
 
 import Home from "./Home";
 

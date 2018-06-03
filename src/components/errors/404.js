@@ -1,6 +1,6 @@
 import React from "react";
 
-require("../../cssLoader").load(__dirname + "/404.css");
+require("../../cssLoader").load(__dirname + "/404.scss");
 
 import TestPost from "../posts/TestPost";
 

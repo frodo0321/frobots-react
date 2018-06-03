@@ -1,6 +1,6 @@
 import React from "react";
 
-require("../cssLoader").load(__dirname + "/Footer.css");
+require("../cssLoader").load(__dirname + "/Footer.scss");
 
 
 class Footer extends React.Component {

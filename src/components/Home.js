@@ -1,8 +1,7 @@
 import React from "react";
 
-require("../cssLoader").load(__dirname + "/Home.css");
+require("../cssLoader").load(__dirname + "/Home.scss");
 
-import TestPost from "./posts/TestPost";
 import PostList from "./PostList";
 
 import MainLayout from "./MainLayout";

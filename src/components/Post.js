@@ -2,7 +2,7 @@ import React from "react";
 
 import MainLayout from "./MainLayout";
 
-require("../cssLoader").load(__dirname + "/Post.css");
+require("../cssLoader").load(__dirname + "/Post.scss");
 
 
 class Post extends React.Component {

@@ -4,7 +4,7 @@ import Header from "./Header";
 import LeftSidebar from "./LeftSidebar";
 import Footer from "./Footer";
 
-require("../cssLoader").load(__dirname + "/MainLayout.css");
+require("../cssLoader").load(__dirname + "/MainLayout.scss");
 
 class MainLayout extends React.Component {
     render() {

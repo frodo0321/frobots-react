@@ -1,6 +1,6 @@
 import React from "react";
 
-require("../cssLoader").load(__dirname + "/Header.css");
+require("../cssLoader").load(__dirname + "/Header.scss");
 
 
 class Header extends React.Component {
