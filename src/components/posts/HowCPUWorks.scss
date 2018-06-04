@@ -1,0 +1,16 @@
+.HowCPUWorks {
+    .gate {
+        fill: white;
+        stroke: #6b6;
+        stroke-width: 2;
+    }
+    #content::selection {
+        background: white;
+    }
+    .post::selection {
+        background: white;
+    }
+    .gate_text::selection {
+        background: white;
+    }
+}

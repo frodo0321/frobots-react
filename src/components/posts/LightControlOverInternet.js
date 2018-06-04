@@ -1,7 +1,7 @@
 import React from "react";
 
 export const title = "Light Control over the Internet";
-export const createdAt = new Date("2015-01-13 22:37:42");
+export const date = new Date("2015-01-13 22:37:42");
 export const published = true;
 module.exports.public = true;
 

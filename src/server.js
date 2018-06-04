@@ -15,7 +15,10 @@ import Error404 from "./components/errors/404";
 
 require("./cssLoader").load(__dirname + "/style.scss");
 
-import posts from "./posts";
+//import posts from "./posts";
+import posts from "./components/posts";
+//const posts2 = require("./components/posts");
+//console.log("POSTS2", posts2);
 
 app.use(function requestLogger(request, response, next) {
 

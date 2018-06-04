@@ -1,7 +1,7 @@
 import React from "react";
 
 export const title = "Computer Vision Security System";
-export const createdAt = new Date("2015-01-17 23:46:57");
+export const date = new Date("2015-01-17 23:46:57");
 export const published = true;
 module.exports.public = true;
 
