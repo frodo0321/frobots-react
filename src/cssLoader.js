@@ -3,6 +3,9 @@ const path = require("path");
 const fs = require("fs");
 
 function CssLoader() {
+
+    this.dirty = false;
+
     this.css = "";
     this.scss = "";
     this.load = function load(filePath) {
@@ -13,8 +16,12 @@ function CssLoader() {
         if (path.extname(filePath) == ".scss") {
             this.scss += fileData;
         }
+        this.dirty = true;
     }
     this.compileCss = function compileCss() {
+        if (this.dirty == false) {
+            return this.compiledCss;
+        }
         let css = "";
         if (this.scss) {
             let result = nodeSass.renderSync({
@@ -24,7 +31,10 @@ function CssLoader() {
             css += result.css.toString();
         }
         css += this.css;
-        return css;
+
+        this.compiledCss = css;
+        this.dirty = false;
+        return this.compiledCss;
     }
 }
 
