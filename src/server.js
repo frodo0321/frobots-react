@@ -22,6 +22,7 @@ import posts from "./components/posts";
 
 require("./middleware/requestLogger")(app);
 
+require("./middleware/images")(app);
 
 app.get("/css/style.css", function(request, response, next) {
     response.setHeader('Content-Type', 'text/css');
