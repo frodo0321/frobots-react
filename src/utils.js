@@ -1,7 +1,10 @@
 import moment from "moment";
 
 export function titleToId(title) {
-    return title.toLowerCase().replace(/[ ]/g, "-");
+    return title.toLowerCase()
+        .replace(/[ \/\\]/g, "-")
+        .replace(/['"~,.<>()\[\]\{\}+*\\=]/g, "")
+        .replace(/[-]+/g, "-")
 }
 
 export function postToUrl(post) {
