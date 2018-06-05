@@ -40,7 +40,7 @@ function fetchPost(request) {
 
 module.exports = function(app) {
 
-    app.get("/p/:date/:postId", function(request, response, next) {
+    app.get("/post/:date/:postId", function(request, response, next) {
 
         var post = fetchPost(request);
         if (!post || !post.component) {
