@@ -3,13 +3,10 @@ import moment from "moment";
 
 require("../cssLoader").load(__dirname + "/PostHeader.scss");
 
-
-function postTitleToId(title) {
-    return title.toLowerCase().replace(/[ ]/g, "-");
-}
+import {postToUrl} from "../utils";
 
 
-class Post extends React.Component {
+class PostHeader extends React.Component {
 
     constructor(props) {
         super(props);
@@ -20,13 +17,14 @@ class Post extends React.Component {
 
         let post = this.props.post;
 
-        let postDate = moment(post.createdAt);
+        let postDate = moment(post.date);
         let displayDateString = postDate.format("MMM DD, YYYY");
-        let hrefDateString = postDate.format("YYYY-MM-DD");
+        //let hrefDateString = postDate.format("YYYY-MM-DD");
 
-        let postId = postTitleToId(post.title);
+        //let postId = postTitleToId(post.title);
 
-        let postUrl = "/p/" + hrefDateString + "/" + postId;
+        //let postUrl = "/p/" + hrefDateString + "/" + postId;
+        let postUrl = postToUrl(post);
 
         let clockSvg = (
             <svg className="clock" width="12" height="12">
@@ -58,4 +56,4 @@ class Post extends React.Component {
     }
 }
 
-export default Post;
+export default PostHeader;

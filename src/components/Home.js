@@ -13,7 +13,7 @@ class Home extends React.Component {
         return (
             <MainLayout>
                 <div className="Home">
-                    <PostList />
+                    <PostList posts={this.props.posts} />
                 </div>
             </MainLayout>
         );

@@ -1,3 +1,7 @@
+import React from "react";
+import ReactDOMServer from "react-dom/server";
+
+import Html from "../components/Html";
 import Error404 from "../components/errors/404";
 
 module.exports = function(app) {

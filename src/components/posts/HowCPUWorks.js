@@ -10,6 +10,9 @@ module.exports.public = true;
 
 export const preview = (
     <div>
+        <p>
+            Computers are in everything today.  From your smartphone, to your microwave, to your car, it's impossible to go through a day without using a computer of some sort.  But how does a computer actually work?  How does a computer... compute?
+        </p>
     </div>
 );
 
@@ -28,14 +31,12 @@ class Post extends React.Component {
         return (
             <div className="post-content HowCPUWorks">
 
-                {preview}
-
                 <script type="text/javascript" src="http://www.frobots.net/wp-includes/js/logic_gate_simulator.min.js"></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
                 <div id="top"></div>
 
-                Computers are in everything today.  From your smartphone, to your microwave, to your car, it's impossible to go through a day without using a computer of some sort.  But how does a computer actually work?  How does a computer... compute?
+                {preview}
 
                 The goal of this post is to give a simple, interactive tutorial on how to build a CPU (Central Processing Unit).
 

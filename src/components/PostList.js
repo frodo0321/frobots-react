@@ -2,14 +2,16 @@ import React from "react";
 
 require("../cssLoader").load(__dirname + "/PostList.scss");
 
-import posts from "./posts";
-
-import PostHeader from "./PostHeader";
+//import PostHeader from "./PostHeader";
+//import PostContent from "./PostContent";
+import Post from "./Post";
 
 
 
 class PostList extends React.Component {
     render() {
+
+        let posts = this.props.posts;
 
         let filteredPosts = posts.filter(post => {
                 return post.published && post.public;
@@ -19,9 +21,7 @@ class PostList extends React.Component {
 
         var postsHtml = filteredPosts.map(post => {
                 return (
-                    <div className="post">
-                        <PostHeader post={post} />
-                    </div>
+                    <Post post={post} type="preview" />
                 );
             });
 

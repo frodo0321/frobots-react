@@ -6,6 +6,10 @@ import posts from "../components/posts";
 
 import Html from "../components/Html";
 import Post from "../components/Post"
+import MainLayout from "../components/MainLayout";
+
+
+import {titleToId} from "../utils";
 
 function fetchPost(request) {
 
@@ -16,9 +20,9 @@ function fetchPost(request) {
     
     var ret = posts.filter(post => {
 
-        var diffDays = moment(post.createdAt).diff(date, "days");
+        var diffDays = moment(post.date).diff(date, "days");
 
-        var titleAsId = post.title.toLowerCase().replace(/[ ]/g, "-");
+        var titleAsId = titleToId(post.title);
 
         let dateMatch = diffDays < 1;
         let titleMatch = titleAsId == id;
@@ -46,13 +50,17 @@ module.exports = function(app) {
             //return response.status(404).json({error: "Not Found"});
         }
 
-        var Component = (<Post post={post} />);
-        //console.log("hydrating");
-        //var hydrated = ReactDOM.hydrate(Component);
-        //console.log("hydrated", hydrated);
-        var html = ReactDOMServer.renderToString(Component);
+        var component = (
+            <MainLayout>
+                <div className="post-container" style={{paddingTop: "72px"}}>
+                    <Post post={post} />
+                </div>
+            </MainLayout>
+        );
+
+        var html = ReactDOMServer.renderToString(component);
         
 
-        response.send(Html({body: html, title: "frobots"}));
+        response.send(Html({body: html, title: post.title + " - frobots"}));
     })
 }

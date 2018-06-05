@@ -2,26 +2,25 @@
     padding-top: 72px;
 }
 
-.PostList .post {
-    margin: 0px auto;
-    padding: 0px 30px 10px;
+.PostList .Post {
+    max-width: 672px;
     padding-top: 48px;
     margin-bottom: 48px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    max-width: 672px;
 }
 
-.PostList .post:first-of-type {
+.PostList .Post:first-of-type {
     border: 0;
+    padding-top: 0px;
 }
 
-.PostList .post>* {
-    max-width: 474px;
-    margin: 0px auto;
-}
+//.PostList .post>* {
+//    max-width: 474px;
+//    margin: 0px auto;
+//}
 
 
-.PostList .post .post-title a:hover {
-    color: #24890d;
-}
+//.PostList .post .post-title a:hover {
+//    color: #24890d;
+//}
 
