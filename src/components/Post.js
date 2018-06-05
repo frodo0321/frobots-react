@@ -35,7 +35,7 @@ class Post extends React.Component {
             <div className="Post">
                 <PostHeader post={post} />
                 <PostContent content={content} />
-                <div><a href={postToUrl(post)}>Continue reading →</a></div>
+                {type == "preview" ? <div><a href={postToUrl(post)}>Continue reading →</a></div> : ""}
             </div>
        );
     }
