@@ -40,6 +40,8 @@ app.get("/", function(request, response) {
 });
 
 require("./middleware/posts")(app);
+require("./middleware/pages")(app);
+
 require("./middleware/errorHandler")(app);
 
 

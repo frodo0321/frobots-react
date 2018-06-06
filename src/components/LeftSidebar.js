@@ -1,18 +1,32 @@
 import React from "react";
 
+import {pageToUrl} from "../utils";
+
 require("../cssLoader").load(__dirname + "/LeftSidebar.scss");
+
+import pages from "./pages";
 
 class LeftSidebar extends React.Component {
     render() {
+
+
+        var pageHtml = (
+            <ul>{
+                pages.map(page => {
+                    return (
+                        <li>
+                            <a href={pageToUrl(page)}>{page.title}</a>
+                        </li>
+                    );
+                })
+            }</ul>
+        );
 
         return (
             <div className="LeftSidebar">
                 <div className="list">
                     <div className="title">Pages</div>
-                    <ul>
-                        <li><a href="#">Test1</a></li>
-                        <li><a href="#">TETS2</a></li>
-                    </ul>
+                    {pageHtml}
                 </div>
             </div>
        );

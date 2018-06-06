@@ -17,5 +17,14 @@ export function postToUrl(post) {
     let postUrl = "/post/" + hrefDateString + "/" + postId;
 
     return postUrl;
+}
+
+export function pageToUrl(page) {
+
+    let pageId = titleToId(page.title);
+
+    let pageUrl = "/" + pageId;
+
+    return pageUrl;
 
 }
