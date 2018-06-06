@@ -42,6 +42,8 @@ app.get("/", function(request, response) {
 require("./middleware/posts")(app);
 require("./middleware/pages")(app);
 
+require("./middleware/404")(app);
+
 require("./middleware/errorHandler")(app);
 
 
