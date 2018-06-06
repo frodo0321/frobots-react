@@ -1,10 +1,12 @@
 import React from "react";
 
-import {pageToUrl} from "../utils";
+import {pageToUrl, titleToId} from "../utils";
 
 require("../cssLoader").load(__dirname + "/LeftSidebar.scss");
 
 import pages from "./pages";
+
+const pagesDisplayed = ["books", "resume"];
 
 class LeftSidebar extends React.Component {
     render() {
@@ -12,13 +14,17 @@ class LeftSidebar extends React.Component {
 
         var pageHtml = (
             <ul>{
-                pages.map(page => {
-                    return (
-                        <li>
-                            <a href={pageToUrl(page)}>{page.title}</a>
-                        </li>
-                    );
-                })
+                pages
+                    .filter(page => {
+                        return pagesDisplayed.includes(titleToId(page.title));
+                    })
+                    .map(page => {
+                        return (
+                            <li>
+                                <a href={pageToUrl(page)}>{page.title}</a>
+                            </li>
+                        );
+                    })
             }</ul>
         );
 

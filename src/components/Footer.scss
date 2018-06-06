@@ -6,4 +6,33 @@
     flex-direction: row;
     align-items: center;
     justify-items: center;
+
+    font-size: 12px;
+    position: relative;
+    z-index: 3;
+
+    ul {
+        list-style-type: none;
+    }
+
+    .footer-sidebar {
+        font-size: 12px;
+        line-height: 1.5;
+        .text {
+            padding: 0px 30px;
+            position: absolute;
+            left: 0px;
+            top: 48px;
+        }
+    }
+
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #41a62a;
+    }
+
 }
